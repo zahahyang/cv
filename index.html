@@ -1,0 +1,3319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zahah Yang — Senior Brand Designer · 13 Years Across Four B2B Sectors</title>
+<meta name="description" content="Senior Brand Designer translating B2B complexity into commercial value. 13 years across publishing, sportswear, FinTech, medical devices. NT$1M+ ad revenue impact." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Zahah Yang — Senior Brand Designer" />
+<meta property="og:description" content="13 years across four B2B sectors · Brand strategy through to front-end fidelity." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Zahah Yang, Senior Brand Designer — 13 years across four B2B sectors, NT$1M+ ad revenue impact" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Zahah Yang — Senior Brand Designer" />
+<meta name="twitter:description" content="13 years across four B2B sectors · Brand strategy through to front-end fidelity." />
+<meta name="twitter:image" content="og-image.png" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================
+   DESIGN TOKENS — Warm Indigo
+   ============================================ */
+:root {
+  --bg: #14141C;
+  --bg-elevated: #1B1B25;
+  --bg-deep: #0C0C12;
+  --bg-soft: #22222E;
+  --bg-card: rgba(255, 255, 255, 0.025);
+
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.15);
+  --line-indigo: rgba(139, 131, 255, 0.3);
+
+  --text-primary: #ECEAF5;
+  --text-secondary: #A0A0B5;
+  --text-muted: #6B6B80;
+
+  --indigo: #8B83FF;
+  --indigo-bright: #A39CFF;
+  --indigo-soft: rgba(139, 131, 255, 0.12);
+  --indigo-glow: rgba(139, 131, 255, 0.25);
+  --indigo-deep: #5A52E0;
+
+  --serif-en: 'Fraunces', serif;
+  --sans-en: 'Inter', -apple-system, sans-serif;
+  --serif-zh: 'Noto Serif TC', serif;
+  --sans-zh: 'Noto Sans TC', sans-serif;
+  --serif: var(--serif-en);
+  --sans: var(--sans-en);
+  --tc: 'Noto Sans TC', sans-serif;
+
+  --max-w: 1280px;
+  --gutter: clamp(20px, 4vw, 64px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+html[lang="zh-Hant"] {
+  --serif: var(--serif-zh);
+  --sans: var(--sans-zh);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+  min-height: 100vh;
+}
+
+::selection { background: var(--indigo); color: var(--bg); }
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(139, 131, 255, 0.025) 1px, transparent 1px);
+  background-size: 5px 5px;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   LANGUAGE TOGGLE
+   ============================================ */
+[data-lang-en], [data-lang-zh] { display: none; }
+html[lang="en"] [data-lang-en] { display: revert; }
+html[lang="zh-Hant"] [data-lang-zh] { display: revert; }
+html[lang="en"] [data-lang-en].inline,
+html[lang="zh-Hant"] [data-lang-zh].inline { display: inline; }
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--sans-en);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+  flex-shrink: 0;
+}
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  padding: 7px 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  transition: all 0.25s;
+  font-family: inherit;
+}
+.lang-toggle button:hover { color: var(--text-primary); }
+.lang-toggle button.active {
+  background: var(--indigo);
+  color: var(--bg);
+}
+
+/* ============================================
+   MOBILE NAV BURGER
+   ============================================ */
+.nav-burger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.nav-burger span {
+  position: absolute;
+  left: 50%;
+  width: 18px;
+  height: 1.5px;
+  background: var(--text-primary);
+  transform: translateX(-50%);
+  transition: all 0.3s var(--ease-out);
+}
+.nav-burger span:nth-child(1) { top: 14px; }
+.nav-burger span:nth-child(2) { top: 19px; }
+.nav-burger span:nth-child(3) { top: 24px; }
+.nav-burger.open span:nth-child(1) { top: 19px; transform: translateX(-50%) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { top: 19px; transform: translateX(-50%) rotate(-45deg); }
+
+/* ============================================
+   SIDE DOT NAV
+   ============================================ */
+.dotnav {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 8px;
+  background: rgba(20, 20, 28, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.dotnav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.dotnav a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: all 0.3s var(--ease-out);
+  margin: 0 auto;
+}
+.dotnav a:hover::before {
+  background: var(--indigo-bright);
+  transform: scale(1.5);
+}
+.dotnav a.active::before {
+  background: var(--indigo);
+  width: 6px;
+  height: 14px;
+  border-radius: 4px;
+  box-shadow: 0 0 12px var(--indigo);
+}
+.dotnav a span {
+  position: absolute;
+  right: 26px;
+  top: 50%;
+  transform: translateY(-50%) translateX(4px);
+  font-family: var(--sans-en);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-indigo);
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s var(--ease-out);
+}
+html[lang="zh-Hant"] .dotnav a span { font-family: var(--sans-zh); }
+.dotnav a:hover span {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 1024px) {
+  .dotnav { display: none; }
+}
+
+/* ============================================
+   NAV
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  background: rgba(20, 20, 28, 0.7);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s var(--ease-soft);
+}
+.nav.scrolled {
+  background: rgba(20, 20, 28, 0.92);
+  border-bottom-color: var(--line);
+}
+
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 16px var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  gap: 16px;
+}
+
+.nav-brand {
+  font-family: var(--serif-en);
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: -0.015em;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+.nav-brand-mark {
+  font-style: italic;
+  color: var(--indigo);
+  font-weight: 400;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+.nav-links a {
+  position: relative;
+  transition: color 0.25s var(--ease-soft);
+  white-space: nowrap;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 1px;
+  background: var(--indigo);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease-out);
+}
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 900px) {
+  .nav-burger { display: block; }
+  .nav-right { gap: 12px; }
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: 16px;
+    left: 16px;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s var(--ease-out);
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links li {
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a {
+    display: block;
+    padding: 14px 12px;
+    font-size: 15px;
+  }
+  .nav-links a::after { display: none; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  padding: 140px 0 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -300px;
+  right: -200px;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(139, 131, 255, 0.13) 0%, rgba(139, 131, 255, 0.04) 35%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(90, 82, 224, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 16px 8px 14px;
+  border: 1px solid var(--line-indigo);
+  border-radius: 999px;
+  background: var(--indigo-soft);
+  font-size: 12px;
+  color: var(--indigo-bright);
+  letter-spacing: 0.02em;
+  margin-bottom: 56px;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) 0.1s forwards;
+}
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--indigo);
+  box-shadow: 0 0 12px var(--indigo);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+.hero-eyebrow-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--line-indigo);
+}
+.hero-eyebrow-meta {
+  color: var(--text-secondary);
+  font-size: 11.5px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.hero-headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(44px, 6.8vw, 96px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  max-width: 1100px;
+  margin-bottom: 48px;
+  font-variation-settings: "opsz" 144;
+}
+html[lang="zh-Hant"] .hero-headline {
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+  font-size: clamp(34px, 5.5vw, 76px);
+  font-weight: 500;
+}
+.hero-headline .line {
+  display: block;
+  overflow: hidden;
+  padding: 0 0 6px;
+}
+.hero-headline .line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: revealUp 1.0s var(--ease-out) forwards;
+}
+.hero-headline .line:nth-child(1) > span { animation-delay: 0.25s; }
+.hero-headline .line:nth-child(2) > span { animation-delay: 0.40s; }
+.hero-headline .line:nth-child(3) > span { animation-delay: 0.55s; }
+.hero-headline em {
+  font-style: italic;
+  color: var(--indigo-bright);
+  font-weight: 400;
+  font-variation-settings: "opsz" 144;
+}
+html[lang="zh-Hant"] .hero-headline em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+@keyframes revealUp {
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-tagline {
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin-bottom: 80px;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) 0.85s forwards;
+}
+.hero-tagline strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.hero-tagline em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--indigo-bright);
+  font-size: 1.05em;
+  font-weight: 400;
+}
+html[lang="zh-Hant"] .hero-tagline em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) 1.1s forwards;
+}
+@media (min-width: 720px) {
+  .hero-stats { grid-template-columns: repeat(3, 1fr); }
+}
+.stat {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: background 0.3s var(--ease-soft);
+}
+.stat:last-child { border-bottom: none; }
+@media (min-width: 720px) {
+  .stat {
+    padding: 36px 32px;
+    border-bottom: none;
+    border-right: 1px solid var(--line);
+  }
+  .stat:first-child { padding-left: 0; }
+  .stat:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+.stat:hover { background: var(--indigo-soft); }
+.stat-eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--indigo);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+.stat-value {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 12px;
+  font-variation-settings: "opsz" 144;
+}
+.stat-value .unit {
+  color: var(--indigo);
+  font-style: italic;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+.hero-cta {
+  margin-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) 1.3s forwards;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  border-radius: 10px;
+  transition: all 0.3s var(--ease-soft);
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary {
+  background: var(--indigo);
+  color: var(--bg);
+  border-color: var(--indigo);
+  box-shadow: 0 4px 20px rgba(139, 131, 255, 0.25);
+}
+.btn-primary:hover {
+  background: var(--indigo-bright);
+  border-color: var(--indigo-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(139, 131, 255, 0.4);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--indigo-bright);
+  color: var(--indigo-bright);
+  background: var(--indigo-soft);
+}
+.btn .arrow {
+  transition: transform 0.3s var(--ease-out);
+  display: inline-block;
+}
+.btn:hover .arrow { transform: translateX(4px); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  right: var(--gutter);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) 1.6s forwards;
+}
+.hero-scroll-line {
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--indigo), transparent);
+  background-size: 200% 100%;
+  animation: scrollShimmer 3s ease-in-out infinite;
+}
+@keyframes scrollShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* ============================================
+   SECTION DEFAULTS
+   ============================================ */
+section {
+  padding: clamp(100px, 14vw, 180px) 0;
+  position: relative;
+}
+
+.sec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo);
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.sec-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--indigo);
+}
+
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(38px, 5.5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  max-width: 900px;
+  font-variation-settings: "opsz" 144;
+}
+.sec-title em {
+  font-style: italic;
+  color: var(--indigo-bright);
+  font-weight: 400;
+}
+
+.sec-sub {
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-bottom: 80px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.0s var(--ease-out), transform 1.0s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   POSITIONING — 4 Industries
+   ============================================ */
+.positioning {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.industries {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: 64px;
+}
+@media (min-width: 720px) {
+  .industries { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .industries { grid-template-columns: repeat(4, 1fr); }
+}
+
+.industry {
+  padding: 48px 32px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: all 0.4s var(--ease-soft);
+  cursor: default;
+}
+.industry:last-child { border-bottom: none; }
+@media (min-width: 720px) {
+  .industry { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
+  .industry:nth-child(2n) { border-right: none; }
+}
+@media (min-width: 1024px) {
+  .industry { border-bottom: none; }
+  .industry:not(:last-child) { border-right: 1px solid var(--line); }
+  .industry:nth-child(2n) { border-right: 1px solid var(--line); }
+  .industry:last-child { border-right: none; }
+}
+.industry::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--indigo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out);
+}
+.industry:hover {
+  background: var(--indigo-soft);
+}
+.industry:hover::before {
+  transform: scaleX(1);
+}
+
+.industry-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--indigo);
+  margin-bottom: 32px;
+}
+.industry-name {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  font-variation-settings: "opsz" 144;
+}
+.industry-zh {
+  font-family: var(--tc);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.industry-clients {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo-bright);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.industry-detail {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   CASES — 3 Deep Cases
+   ============================================ */
+.cases {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--line);
+}
+
+.case {
+  padding: clamp(80px, 12vw, 140px) 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.case:last-of-type { border-bottom: none; }
+
+.case-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+@media (min-width: 900px) {
+  .case-header { grid-template-columns: 200px 1fr; gap: 64px; }
+}
+
+.case-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(72px, 10vw, 120px);
+  font-weight: 300;
+  color: var(--indigo);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  font-variation-settings: "opsz" 144;
+}
+
+.case-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.case-meta-tag {
+  font-size: 11.5px;
+  padding: 5px 12px;
+  border: 1px solid var(--line-indigo);
+  border-radius: 999px;
+  color: var(--indigo-bright);
+  letter-spacing: 0.02em;
+}
+
+.case-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-variation-settings: "opsz" 144;
+}
+.case-title em {
+  font-style: italic;
+  color: var(--indigo-bright);
+  font-weight: 400;
+}
+
+.case-zh {
+  font-family: var(--tc);
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.case-meta {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+.case-meta span {
+  color: var(--indigo);
+}
+
+/* Live Site link button — for real, on-air brand experiences */
+.case-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 8px 16px 8px 14px;
+  background: rgba(139, 131, 255, 0.08);
+  border: 1px solid var(--line-indigo);
+  border-radius: 999px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
+}
+.case-live-link:hover {
+  background: var(--indigo);
+  color: var(--bg);
+  border-color: var(--indigo);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(139, 131, 255, 0.25);
+}
+.case-live-link-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #50d890;
+  position: relative;
+  flex-shrink: 0;
+}
+.case-live-link-dot::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #50d890;
+  opacity: 0.4;
+  animation: livePulse 2s ease-in-out infinite;
+}
+.case-live-link:hover .case-live-link-dot {
+  background: var(--bg);
+}
+.case-live-link:hover .case-live-link-dot::before {
+  background: var(--bg);
+}
+@keyframes livePulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.6); opacity: 0; }
+}
+.case-live-link-label {
+  font-family: var(--sans);
+}
+html[lang="zh-Hant"] .case-live-link-label {
+  font-family: var(--sans-zh);
+}
+.case-live-link-arrow {
+  transition: transform 0.3s var(--ease-out);
+}
+.case-live-link:hover .case-live-link-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Case visual placeholder */
+.case-visual {
+  margin: 48px 0 64px;
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(135deg, rgba(139, 131, 255, 0.08) 0%, rgba(139, 131, 255, 0.02) 100%),
+    var(--bg-deep);
+  border: 1px solid var(--line-indigo);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.case-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(139, 131, 255, 0.1) 0%, transparent 70%);
+  filter: blur(40px);
+}
+.case-visual-placeholder {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.case-visual-icon {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 56px;
+  color: var(--indigo);
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+/* 真實圖片版本(覆寫 placeholder 的虛線邊框、漸層底、blur 效果) */
+.case-visual.case-visual-image {
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  padding: 0;
+}
+.case-visual.case-visual-image::before {
+  display: none;
+}
+.case-visual.case-visual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  transition: transform 1.2s var(--ease-out);
+}
+.case-visual.case-visual-image:hover img {
+  transform: scale(1.02);
+}
+.case-visual-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.case-visual-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Case content blocks */
+.case-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 900px) {
+  .case-content { grid-template-columns: repeat(3, 1fr); gap: 56px; }
+}
+
+.case-block h4 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.case-block h4::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: var(--indigo);
+}
+
+.case-block p,
+.case-block li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+.case-block ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.case-block li {
+  padding-left: 20px;
+  position: relative;
+  color: var(--text-secondary);
+}
+.case-block li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--indigo);
+}
+.case-block strong {
+  color: var(--indigo-bright);
+  font-weight: 500;
+}
+
+.placeholder-tag {
+  display: inline-block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 11.5px;
+  color: var(--indigo);
+  background: var(--indigo-soft);
+  padding: 3px 10px;
+  border: 1px dashed var(--line-indigo);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* Strategy 段內的 sub-block(例:Why one-person ownership) */
+.case-subblock {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line-indigo);
+}
+.case-subblock h5 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--indigo-bright);
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+html[lang="zh-Hant"] .case-subblock h5 {
+  font-family: var(--sans-zh);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Future Direction — 跨越三欄,獨立段落 */
+.case-future {
+  grid-column: 1 / -1;
+  margin-top: 32px;
+  padding: 28px 28px 26px;
+  background: linear-gradient(135deg, rgba(139, 131, 255, 0.06) 0%, rgba(139, 131, 255, 0.02) 100%);
+  border: 1px solid var(--line-indigo);
+  border-radius: 12px;
+  position: relative;
+}
+.case-future::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 28px;
+  width: 60px;
+  height: 2px;
+  background: var(--indigo);
+}
+.case-future h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+.case-future h4::before {
+  content: "→";
+  font-style: normal;
+  font-weight: 400;
+}
+html[lang="zh-Hant"] .case-future h4 {
+  font-family: var(--sans-zh);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.case-future p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.case-future strong {
+  color: var(--indigo-bright);
+  font-weight: 500;
+}
+.case-future ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding-left: 18px;
+}
+.case-future ul li {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  position: relative;
+}
+.case-future ul li::before {
+  content: "—";
+  position: absolute;
+  left: -18px;
+  color: var(--indigo);
+}
+
+/* ============================================
+   CASE GALLERY (multi-image with lightbox trigger)
+   ============================================ */
+.case-gallery {
+  margin: 48px 0 64px;
+}
+.case-gallery-main {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.case-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.4s var(--ease-out);
+}
+.case-gallery-main img.fading {
+  opacity: 0;
+}
+.case-gallery-zoom {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(20, 20, 28, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s var(--ease-out);
+  z-index: 2;
+}
+.case-gallery-zoom:hover {
+  background: var(--indigo);
+  color: var(--bg);
+  border-color: var(--indigo);
+  transform: scale(1.05);
+}
+.case-gallery-counter {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--text-primary);
+  background: rgba(20, 20, 28, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+html[lang="zh-Hant"] .case-gallery-counter {
+  font-family: var(--sans-zh);
+  font-style: normal;
+}
+
+.case-gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+@media (max-width: 720px) {
+  .case-gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
+}
+.case-gallery-thumb {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-deep);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  transition: all 0.25s var(--ease-out);
+}
+.case-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.55;
+  transition: opacity 0.25s;
+}
+.case-gallery-thumb:hover img,
+.case-gallery-thumb.active img {
+  opacity: 1;
+}
+.case-gallery-thumb.active {
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 2px var(--indigo-soft);
+}
+
+/* ============================================
+   LIGHTBOX (full-screen image viewer)
+   ============================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 14, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 60px 80px;
+}
+.lightbox.open {
+  display: flex;
+  animation: lightboxFadeIn 0.3s var(--ease-out);
+}
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.lightbox-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 0;
+}
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s var(--ease-out);
+}
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--indigo);
+  color: var(--bg);
+  border-color: var(--indigo);
+}
+.lightbox-close { top: 24px; right: 24px; }
+.lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-meta {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: rgba(20, 20, 28, 0.6);
+  border: 1px solid var(--line);
+  padding: 8px 18px;
+  border-radius: 999px;
+  max-width: 90vw;
+}
+.lightbox-counter {
+  color: var(--indigo-bright);
+  font-family: var(--serif-en);
+  font-style: italic;
+}
+html[lang="zh-Hant"] .lightbox-counter {
+  font-family: var(--sans-zh);
+  font-style: normal;
+}
+.lightbox-caption {
+  color: var(--text-primary);
+}
+
+@media (max-width: 720px) {
+  .lightbox { padding: 40px 16px 100px; }
+  .lightbox-close { top: 12px; right: 12px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-meta {
+    bottom: 12px;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    padding: 8px 14px;
+  }
+}
+
+body.lightbox-open { overflow: hidden; }
+
+/* ============================================
+   AWARDS — Single Hero Band (依你選的 hero band 樣式)
+   ============================================ */
+.awards {
+  background: var(--bg-deep);
+  padding: clamp(120px, 16vw, 200px) 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+}
+.awards::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1400px;
+  height: 800px;
+  background: radial-gradient(ellipse, rgba(139, 131, 255, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.awards-eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo);
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+.awards-eyebrow::before,
+.awards-eyebrow::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--indigo);
+  opacity: 0.5;
+}
+
+.awards-headline {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 96px;
+  position: relative;
+  z-index: 2;
+  font-variation-settings: "opsz" 144;
+}
+.awards-headline em {
+  font-style: italic;
+  color: var(--indigo-bright);
+  font-weight: 400;
+}
+
+/* Single horizontal band — 兩個 hook 並排,不是卡片 */
+.awards-band {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--line-indigo);
+  border-bottom: 1px solid var(--line-indigo);
+}
+@media (min-width: 800px) {
+  .awards-band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.award-cell {
+  padding: 64px 40px;
+  border-bottom: 1px solid var(--line-indigo);
+  position: relative;
+  transition: background 0.4s var(--ease-soft);
+}
+.award-cell:last-child { border-bottom: none; }
+@media (min-width: 800px) {
+  .award-cell {
+    border-bottom: none;
+    border-right: 1px solid var(--line-indigo);
+    padding: 80px 56px;
+  }
+  .award-cell:last-child { border-right: none; }
+}
+.award-cell:hover {
+  background: rgba(139, 131, 255, 0.04);
+}
+
+.award-cell-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-family: var(--serif);
+  font-style: italic;
+}
+.award-cell-meta span:first-child {
+  padding: 4px 12px;
+  border: 1px solid var(--line-indigo);
+  border-radius: 999px;
+  color: var(--indigo-bright);
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.award-cell-value {
+  font-family: var(--serif);
+  font-size: clamp(60px, 9vw, 104px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-variation-settings: "opsz" 144;
+}
+.award-cell-value em {
+  font-style: italic;
+  color: var(--indigo-bright);
+  font-weight: 400;
+}
+
+.award-cell-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--indigo-bright);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.award-cell-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.awards-footer {
+  margin-top: 72px;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 1.4vw, 17px);
+  color: var(--text-muted);
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.awards-footer span {
+  color: var(--indigo);
+  border-bottom: 1px dashed var(--indigo);
+  padding-bottom: 2px;
+}
+
+/* ============================================
+   EXPERIENCE TIMELINE
+   ============================================ */
+.experience {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.exp-list {
+  display: grid;
+  gap: 0;
+  margin-top: 32px;
+}
+.exp-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  transition: padding 0.3s var(--ease-soft);
+}
+.exp-item:hover { padding-left: 16px; }
+.exp-item:last-child { border-bottom: 1px solid var(--line); }
+
+@media (min-width: 800px) {
+  .exp-item {
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+  }
+  .exp-item:hover { padding-left: 0; padding-right: 0; }
+}
+
+.exp-date {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo);
+  letter-spacing: 0.02em;
+  padding-top: 4px;
+}
+
+.exp-role {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  font-variation-settings: "opsz" 144;
+}
+.exp-role-zh {
+  font-family: var(--tc);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+.exp-company {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+.exp-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--indigo-bright);
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--indigo);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.exp-tags span {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.exp-bullets {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.exp-bullets li {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+.exp-bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--indigo);
+}
+
+/* ============================================
+   CAPABILITIES
+   ============================================ */
+.capabilities {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--line);
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+}
+@media (min-width: 760px) {
+  .cap-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.cap {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 24px;
+  align-items: start;
+  transition: all 0.3s var(--ease-soft);
+}
+@media (min-width: 760px) {
+  .cap { padding: 48px 32px; }
+  .cap:nth-child(odd) { padding-left: 0; padding-right: 40px; border-right: 1px solid var(--line); }
+  .cap:nth-child(even) { padding-left: 40px; padding-right: 0; }
+  .cap:nth-last-child(-n+2) { border-bottom: none; }
+}
+.cap:hover { background: var(--indigo-soft); }
+
+.cap-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--indigo);
+  font-weight: 400;
+  line-height: 1;
+}
+.cap-body h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-variation-settings: "opsz" 144;
+}
+.cap-body .zh {
+  font-family: var(--tc);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.cap-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cap-tool {
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: all 0.25s var(--ease-soft);
+}
+.cap-tool:hover {
+  color: var(--indigo-bright);
+  border-color: var(--indigo);
+}
+
+/* ============================================
+   CTA
+   ============================================ */
+.cta {
+  background: var(--bg);
+  padding: clamp(120px, 16vw, 200px) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+}
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(139, 131, 255, 0.1) 0%, transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.cta-eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--indigo);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(44px, 6.5vw, 88px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+  font-variation-settings: "opsz" 144;
+}
+.cta-title em {
+  font-style: italic;
+  color: var(--indigo-bright);
+}
+
+.cta-sub {
+  font-size: clamp(15px, 1.4vw, 18px);
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto 56px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 64px;
+}
+
+.cta-contact {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--indigo-bright);
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed var(--indigo);
+  transition: all 0.25s var(--ease-soft);
+}
+.cta-contact:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background: var(--bg-deep);
+  padding: 80px 0 48px;
+  border-top: 1px solid var(--line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+@media (min-width: 720px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+}
+.foot-brand {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 144;
+}
+.foot-brand em {
+  font-style: italic;
+  color: var(--indigo);
+  font-weight: 400;
+}
+.foot-tag {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.foot-col h4 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--indigo);
+  margin-bottom: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+.foot-col a, .foot-col span {
+  display: block;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  transition: color 0.2s;
+  letter-spacing: -0.005em;
+}
+.foot-col a:hover { color: var(--indigo-bright); }
+.foot-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   CHINESE MODE — GLOBAL OVERRIDES
+   把所有 italic 在中文模式下改成 normal + 粗體
+   ============================================ */
+html[lang="zh-Hant"] .sec-title em,
+html[lang="zh-Hant"] .case-title em,
+html[lang="zh-Hant"] .awards-headline em,
+html[lang="zh-Hant"] .cta-title em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+html[lang="zh-Hant"] .sec-title,
+html[lang="zh-Hant"] .case-title,
+html[lang="zh-Hant"] .awards-headline,
+html[lang="zh-Hant"] .cta-title {
+  letter-spacing: 0;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* Mono / italic eyebrows in Chinese — switch to clean sans */
+html[lang="zh-Hant"] .sec-eyebrow,
+html[lang="zh-Hant"] .stat-eyebrow,
+html[lang="zh-Hant"] .case-meta,
+html[lang="zh-Hant"] .case-block h4,
+html[lang="zh-Hant"] .awards-eyebrow,
+html[lang="zh-Hant"] .awards-footer,
+html[lang="zh-Hant"] .cta-eyebrow,
+html[lang="zh-Hant"] .exp-date,
+html[lang="zh-Hant"] .foot-tag,
+html[lang="zh-Hant"] .foot-col h4,
+html[lang="zh-Hant"] .award-cell-meta,
+html[lang="zh-Hant"] .award-cell-title,
+html[lang="zh-Hant"] .case-visual-hint,
+html[lang="zh-Hant"] .placeholder-tag,
+html[lang="zh-Hant"] .hero-scroll {
+  font-family: var(--sans-zh);
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+html[lang="zh-Hant"] .exp-quote {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Industry clients in Chinese should use sans */
+html[lang="zh-Hant"] .industry-clients {
+  font-family: var(--sans-zh);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Award value italic em in Chinese */
+html[lang="zh-Hant"] .award-cell-value em {
+  font-style: normal;
+  font-weight: 500;
+}
+html[lang="zh-Hant"] .award-cell-value {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Hide Chinese sub-labels in Chinese mode (already redundant) */
+html[lang="zh-Hant"] .case-zh,
+html[lang="zh-Hant"] .industry-zh,
+html[lang="zh-Hant"] .cap-body .zh,
+html[lang="zh-Hant"] .exp-role-zh {
+  display: none;
+}
+
+/* Ensure brand stays in Latin font (it's a name) */
+.nav-brand,
+.foot-brand {
+  font-family: var(--serif-en) !important;
+}
+.foot-brand em {
+  font-style: italic !important;
+}
+
+/* ============================================
+   PRINT FALLBACK
+   ============================================ */
+@media print {
+  .nav, .hero-scroll, .dotnav { display: none; }
+  body { background: white; color: black; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAV
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <span class="nav-brand-mark">Z—</span>
+      <span>Zahah Yang</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#positioning"><span data-lang-en class="inline">Positioning</span><span data-lang-zh class="inline">定位</span></a></li>
+        <li><a href="#cases"><span data-lang-en class="inline">Cases</span><span data-lang-zh class="inline">代表案例</span></a></li>
+        <li><a href="#awards"><span data-lang-en class="inline">Awards</span><span data-lang-zh class="inline">商業成果</span></a></li>
+        <li><a href="#experience"><span data-lang-en class="inline">Experience</span><span data-lang-zh class="inline">工作經歷</span></a></li>
+        <li><a href="#contact"><span data-lang-en class="inline">Contact</span><span data-lang-zh class="inline">聯繫</span></a></li>
+      </ul>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button id="langEn" class="active" type="button">EN</button>
+        <button id="langZh" type="button">中</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     SIDE DOT NAV
+     ============================================ -->
+<nav class="dotnav" id="dotnav">
+  <a href="#top"><span data-lang-en class="inline">Home</span><span data-lang-zh class="inline">首頁</span></a>
+  <a href="#positioning"><span data-lang-en class="inline">Positioning</span><span data-lang-zh class="inline">定位</span></a>
+  <a href="#cases"><span data-lang-en class="inline">Cases</span><span data-lang-zh class="inline">代表案例</span></a>
+  <a href="#awards"><span data-lang-en class="inline">Awards</span><span data-lang-zh class="inline">商業成果</span></a>
+  <a href="#experience"><span data-lang-en class="inline">Experience</span><span data-lang-zh class="inline">工作經歷</span></a>
+  <a href="#capabilities"><span data-lang-en class="inline">Capabilities</span><span data-lang-zh class="inline">能力光譜</span></a>
+  <a href="#contact"><span data-lang-en class="inline">Contact</span><span data-lang-zh class="inline">聯繫</span></a>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span data-lang-en>Senior Brand Designer</span>
+        <span data-lang-zh>資深品牌設計師</span>
+        <span class="hero-eyebrow-divider"></span>
+        <span class="hero-eyebrow-meta">
+          <span data-lang-en>New Taipei City · Open to roles</span>
+          <span data-lang-zh>新北市 · 開放新機會</span>
+        </span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span data-lang-en>
+          <span class="line"><span>Brand design that translates</span></span>
+          <span class="line"><span><em>B2B complexity</em> into</span></span>
+          <span class="line"><span>commercial value.</span></span>
+        </span>
+        <span data-lang-zh>
+          <span class="line"><span>將 <em>B2B 的複雜度</em></span></span>
+          <span class="line"><span>轉譯為可被衡量的</span></span>
+          <span class="line"><span>商業視覺資產。</span></span>
+        </span>
+      </h1>
+
+      <p class="hero-tagline">
+        <span data-lang-en>
+          <strong>13 years across four B2B sectors</strong> — publishing, sportswear, FinTech, medical devices.
+          Design strategy through to <em>front-end fidelity</em>. Brand details survive from file to live deployment.
+        </span>
+        <span data-lang-zh>
+          <strong>13 年橫跨四大 B2B 產業</strong> — B2B 媒體、運動電商、區塊鏈金融、醫療器材。
+          從品牌策略到<em>前端完整保真度</em>。品牌細節從設計稿到上線無妥協。
+        </span>
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-eyebrow">
+            <span data-lang-en class="inline">Revenue Impact</span>
+            <span data-lang-zh class="inline">商業成果</span>
+          </div>
+          <div class="stat-value">NT$1M<span class="unit">+</span></div>
+          <div class="stat-label">
+            <span data-lang-en>Ad revenue from primary visual design — ShowDaily Medical Expo, 2019–2021</span>
+            <span data-lang-zh>主視覺設計支撐 ShowDaily 醫療展年度專刊達成 — 2019–2021</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-eyebrow">
+            <span data-lang-en class="inline">Recognition</span>
+            <span data-lang-zh class="inline">個人獎項</span>
+          </div>
+          <div class="stat-value">2021</div>
+          <div class="stat-label">
+            <span data-lang-en>Outstanding Employee Award — Economic Daily News (individual)</span>
+            <span data-lang-zh>經濟日報傑出員工獎(個人獎項)</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-eyebrow">
+            <span data-lang-en class="inline">Range</span>
+            <span data-lang-zh class="inline">產業跨度</span>
+          </div>
+          <div class="stat-value">4<span class="unit"> / 13y</span></div>
+          <div class="stat-label">
+            <span data-lang-en>B2B sectors operated · Media · Sportswear · FinTech · Med-Device</span>
+            <span data-lang-zh>四大 B2B 產業 · 媒體 · 運動電商 · 金融科技 · 醫療器材</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#cases" class="btn btn-primary">
+          <span data-lang-en class="inline">See the cases</span>
+          <span data-lang-zh class="inline">查看代表案例</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="mailto:sarah20120829@gmail.com" class="btn btn-ghost">
+          <span data-lang-en class="inline">Email me</span>
+          <span data-lang-zh class="inline">發送 Email</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-lang-en class="inline">Scroll</span>
+    <span data-lang-zh class="inline">向下捲動</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+</header>
+
+<!-- ============================================
+     POSITIONING — Cross-Industry Translator
+     ============================================ -->
+<section class="positioning" id="positioning">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">
+        <span data-lang-en class="inline">01 / Positioning</span>
+        <span data-lang-zh class="inline">01 / 定位</span>
+      </div>
+      <h2 class="sec-title">
+        <span data-lang-en>A <em>cross-industry</em> B2B translator,<br/>not another brand designer.</span>
+        <span data-lang-zh>是<em>跨產業 B2B 集使</em>,<br/>不是又一個品牌設計師。</span>
+      </h2>
+      <p class="sec-sub">
+        <span data-lang-en>Most brand designers specialize in one vertical. Over 13 years, my client base has spanned four sectors with vastly different business logics — the rare designer who can absorb an unfamiliar B2B context fast and ship visual assets that move the commercial needle.</span>
+        <span data-lang-zh>多數品牌設計師深耕單一產業。我過去 13 年的客戶橫跨四個商業邏輯截然不同的產業 — 擅長在短時間內理解陌生的 B2B 商業語境,並產出能撥動商業指針的視覺資產。</span>
+      </p>
+    </div>
+
+    <div class="industries reveal">
+      <div class="industry">
+        <div class="industry-num">01</div>
+        <div class="industry-name">
+          <span data-lang-en>B2B Publishing</span>
+          <span data-lang-zh>B2B 媒體出版</span>
+        </div>
+        <div class="industry-zh">B2B 媒體出版</div>
+        <div class="industry-clients">
+          <span data-lang-en>Economic Daily News<br/>× TAITRA</span>
+          <span data-lang-zh>經濟日報<br/>× 外貿協會</span>
+        </div>
+        <div class="industry-detail">
+          <span data-lang-en>Editorial & expo branding for export manufacturers. Translating long-form B2B content into reader-friendly visual systems.</span>
+          <span data-lang-zh>外銷台灣製造商的編輯設計與展會視覺。將長篇 B2B 內容轉譯為閱讀友善的視覺系統。</span>
+        </div>
+      </div>
+      <div class="industry">
+        <div class="industry-num">02</div>
+        <div class="industry-name">
+          <span data-lang-en>Sportswear<br/>E-Commerce</span>
+          <span data-lang-zh>運動品牌電商</span>
+        </div>
+        <div class="industry-zh">運動品牌電商</div>
+        <div class="industry-clients">
+          <span data-lang-en>SKECHERS<br/>BROOKS</span>
+          <span data-lang-zh>SKECHERS<br/>BROOKS</span>
+        </div>
+        <div class="industry-detail">
+          <span data-lang-en>UNO collection visual strategy with full design-to-front-end ownership. Brand tone, layout, motion to HTML/CSS/JS.</span>
+          <span data-lang-zh>UNO 系列電商視覺策略,從品牌調性、版面、動態到 HTML/CSS/JS 完整鏈路一人包辦。</span>
+        </div>
+      </div>
+      <div class="industry">
+        <div class="industry-num">03</div>
+        <div class="industry-name">
+          <span data-lang-en>FinTech / Blockchain</span>
+          <span data-lang-zh>區塊鏈金融科技</span>
+        </div>
+        <div class="industry-zh">區塊鏈金融科技</div>
+        <div class="industry-clients">
+          <span data-lang-en>Skycloud<br/>GoEasy Tech</span>
+          <span data-lang-zh>騰雲運算<br/>高易科技</span>
+        </div>
+        <div class="industry-detail">
+          <span data-lang-en>Full UI/UX & Figma Design System for blockchain finance platform. Dual-track core + application system.</span>
+          <span data-lang-zh>區塊鏈金融平台完整 UI/UX 與 Figma Design System,基本系統 + 應用系統雙軌架構。</span>
+        </div>
+      </div>
+      <div class="industry">
+        <div class="industry-num">04</div>
+        <div class="industry-name">
+          <span data-lang-en>Medical Device</span>
+          <span data-lang-zh>醫療器材</span>
+        </div>
+        <div class="industry-zh">醫療器材</div>
+        <div class="industry-clients">
+          <span data-lang-en>QT Medical</span>
+          <span data-lang-zh>美商宇心生醫</span>
+        </div>
+        <div class="industry-detail">
+          <span data-lang-en>Cardiac monitoring brand visual coordination across global medical conferences (B2B2C multi-stakeholder).</span>
+          <span data-lang-zh>心臟監測醫材品牌全球醫學會視覺統籌,服務 B2B2C 多層決策鏈。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CASES — 3 Deep Cases
+     ============================================ -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">
+        <span data-lang-en class="inline">02 / Selected Work</span>
+        <span data-lang-zh class="inline">02 / 代表案例</span>
+      </div>
+      <h2 class="sec-title">
+        <span data-lang-en>Three projects, three <em>commercial outcomes.</em></span>
+        <span data-lang-zh>三個案例,三個<em>商業成果。</em></span>
+      </h2>
+      <p class="sec-sub">
+        <span data-lang-en>Each case framed by Challenge · Strategy · Result — what the business needed, how I positioned the visual response, and what it returned.</span>
+        <span data-lang-zh>每個案例以「挑戰 · 策略 · 成果」為敘事框架 — 商業端要的是什麼、我如何定位視覺方案、產出什麼回報。</span>
+      </p>
+    </div>
+
+    <!-- Case 01: Geocan -->
+    <!-- Case 01: SKECHERS UNO -->
+    <article class="case reveal">
+      <div class="case-header">
+        <div class="case-num">01</div>
+        <div>
+          <div class="case-meta-tags">
+            <span class="case-meta-tag" data-lang-en>Brand Strategy</span><span class="case-meta-tag" data-lang-zh>品牌策略</span>
+            <span class="case-meta-tag" data-lang-en>Visual</span><span class="case-meta-tag" data-lang-zh>視覺</span>
+            <span class="case-meta-tag" data-lang-en>Front-End</span><span class="case-meta-tag" data-lang-zh>前端開發</span>
+            <span class="case-meta-tag" data-lang-en>Localization</span><span class="case-meta-tag" data-lang-zh>在地化</span>
+          </div>
+          <h3 class="case-title">
+            <span data-lang-en>Hand-drawn warmth in a<br/><em>tech-driven</em> brand matrix.</span>
+            <span data-lang-zh>科技品牌矩陣中的<br/><em>手繪溫度</em>。</span>
+          </h3>
+          <div class="case-zh">SKECHERS UNO 電商視覺策略 — 設計到前端完整保真度</div>
+          <div class="case-meta">
+            <span data-lang-en>2022 — 2023 · <span>SKECHERS Taiwan</span></span>
+            <span data-lang-zh>2022 — 2023 · <span>思克威爾股份有限公司</span></span>
+          </div>
+          <a class="case-live-link" href="https://zahahyang.github.io/visual_portfolios/portfolio/onepage/uno/index.html" target="_blank" rel="noopener noreferrer">
+            <span class="case-live-link-dot"></span>
+            <span class="case-live-link-label">
+              <span data-lang-en class="inline">View live brand experience</span>
+              <span data-lang-zh class="inline">查看上線品牌體驗</span>
+            </span>
+            <svg class="case-live-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="case-visual case-visual-image">
+        <img src="images/skechers-uno-keyvisual.jpg" alt="SKECHERS UNO Key Visual — 城市漫遊 / 無限 X collection" loading="lazy" />
+      </div>
+
+      <div class="case-content">
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Challenge</span><span data-lang-zh class="inline">挑戰</span></h4>
+          <p>
+            <span data-lang-en>The classic UNO collection within SKECHERS' broader portfolio needed differentiated visual presence — standing out from the brand's machine-led performance language while building emotional proximity with <strong>young consumers (the deliberate anti-target was the SKECHERS comfort-mom segment)</strong>. The category challenge: most footwear in this space defaults to either retro-athletic or urban-casual codes — both already saturated.</span>
+            <span data-lang-zh>SKECHERS 品牌矩陣中的經典款 UNO 系列需要差異化視覺存在 — 在 SKECHERS 主品牌的「機能運動」語言之外,與<strong>年輕消費族群</strong>建立情感親近(<strong>刻意排除的客群是 SKECHERS 既有的舒適媽媽族群</strong>)。品類挑戰:這個賽道的視覺語言多數預設走復古運動或都會休閒 — 兩個方向已經飽和。</span>
+          </p>
+        </div>
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Strategy</span><span data-lang-zh class="inline">策略</span></h4>
+          <p>
+            <span data-lang-en>Cross-functional collaboration with planning team to define a <strong>hand-drawn typographic direction</strong> — chosen to tap into the rising hand-drawn aesthetic in 2022 youth social-media culture, conveying <strong>diary-like emotional warmth</strong> that an industrial/printed language couldn't deliver. <strong>Localization decision</strong>: rejected direct adoption of SKECHERS' US-market visual codes — Taiwan's young consumer culture reads emotional warmth and locality differently. Owned the full pipeline: brand positioning, logo, layout, static + motion design, plus HTML/CSS/JS Landing Page.</span>
+            <span data-lang-zh>與企劃跨部門合作,定調<strong>手寫風格</strong>作為視覺方向 — 對應 2022 年輕世代社群文化中崛起的手寫美學風潮,傳達<strong>「日記般」的情感溫度</strong>,這是印刷感/工業感的語言做不到的。<strong>在地化決策</strong>:否決直接沿用 SKECHERS 美國市場的視覺語言 — 台灣年輕消費文化對情感溫度與在地感的解讀方式不同。完整負責全鏈路:品牌定位、Logo、版面、靜態與動態設計,以及 HTML/CSS/JS Landing Page。</span>
+          </p>
+          <div class="case-subblock">
+            <h5>
+              <span data-lang-en>Why one-person ownership</span>
+              <span data-lang-zh>為什麼一人包辦</span>
+            </h5>
+            <p>
+              <span data-lang-en>The role at SKECHERS Taiwan combined visual design and front-end execution by structural design. What I learned from inhabiting that role: this combined ownership solves a problem invisible until you've worked both sides — animation timing drifts, hand-drawn type renders inconsistently, hover micro-interactions get simplified for implementation speed. As both designer and front-end engineer, I preserved brand details by <strong>skipping the translation layer entirely</strong>.</span>
+              <span data-lang-zh>思克威爾這個職位的結構性設計就是「視覺設計 + 前端執行」雙重身分。從這個角色學到的:這種合一式的責任歸屬解決了一個「不做兩邊就看不見」的問題 — 動態 timing 偏移、手寫字體渲染不一致、hover 微互動被簡化為實作便利。作為同時擔任設計師與前端工程師的人,我<strong>透過跳過翻譯層</strong>來保留品牌細節。</span>
+            </p>
+          </div>
+        </div>
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Result</span><span data-lang-zh class="inline">成果</span></h4>
+          <ul>
+            <li>
+              <span data-lang-en>Differentiated visual assets for UNO collection, extending across e-commerce and retail channels.</span>
+              <span data-lang-zh>為 UNO 系列建立差異化視覺資產,延伸至電商與店頭通路。</span>
+            </li>
+            <li>
+              <span data-lang-en><strong>One-person ownership from design file to live front-end</strong> — no detail lost in handoff.</span>
+              <span data-lang-zh><strong>從設計稿到前端上線一人完整保真度</strong> — 品牌細節無妥協。</span>
+            </li>
+            <li>
+              <span data-lang-en>Consistent visual asset library reusable across the UNO collection lifecycle.</span>
+              <span data-lang-zh>可重複使用的 UNO 系列視覺資產庫。</span>
+            </li>
+          </ul>
+        </div>
+        <div class="case-future">
+          <h4>
+            <span data-lang-en>Future Direction (if revisiting in 2026)</span>
+            <span data-lang-zh>未來方向(假設 2026 年重啟)</span>
+          </h4>
+          <p>
+            <span data-lang-en>The 2022 hand-drawn diary aesthetic established UNO's emotional differentiation — but the audience has aged with the brand. The next-season direction I'd propose: <strong>preserve the hand-drawn aesthetic as UNO's brand anchor, but split the visual language by generational reading</strong>:</span>
+            <span data-lang-zh>2022 年的手寫日記美學成功建立 UNO 的情感差異化 — 但客群已隨品牌一起變老。下一季我會提的方向:<strong>保留手寫美學作為 UNO 的品牌錨點,但依世代解讀切分視覺語法</strong>:</span>
+          </p>
+          <ul>
+            <li>
+              <span data-lang-en><strong>25–30 segment</strong>: lean further into individuality and lo-fi expression — looser hand lettering, candid layouts.</span>
+              <span data-lang-zh><strong>25–30 歲族群</strong>:加深個性與 lo-fi 表達 — 更鬆散的手寫筆觸、更直覺的版面。</span>
+            </li>
+            <li>
+              <span data-lang-en><strong>30–44 segment</strong>: refined hand-drawn vocabulary — more deliberate strokes, tighter typographic discipline, premium paper textures.</span>
+              <span data-lang-zh><strong>30–44 歲族群</strong>:精煉的手寫語彙 — 更刻意的筆觸、更收束的字體紀律、紙張質感升級。</span>
+            </li>
+          </ul>
+          <p>
+            <span data-lang-en><em>The principle: a brand language that ages with its audience without alienating new entrants.</em></span>
+            <span data-lang-zh><em>核心原則:讓品牌語言隨客群一起成熟,但不會排擠新加入者。</em></span>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 02: 騰雲 -->
+    <article class="case reveal">
+      <div class="case-header">
+        <div class="case-num">02</div>
+        <div>
+          <div class="case-meta-tags">
+            <span class="case-meta-tag" data-lang-en>Branding</span><span class="case-meta-tag" data-lang-zh>品牌系統</span>
+            <span class="case-meta-tag" data-lang-en>VIS System</span><span class="case-meta-tag" data-lang-zh>VIS 規範</span>
+            <span class="case-meta-tag" data-lang-en>Website</span><span class="case-meta-tag" data-lang-zh>官方網站</span>
+          </div>
+          <h3 class="case-title">
+            <span data-lang-en>Modernizing a 30-year B2B contractor<br/>without breaking <em>30 years of trust.</em></span>
+            <span data-lang-zh>30 年 B2B 工程承包商的<br/><em>信任資產延續式重塑</em>。</span>
+          </h3>
+          <div class="case-zh">久廣室內裝修 — 30 年 B2B 工程承包商品牌數位重塑</div>
+          <div class="case-meta">
+            <span data-lang-en>2025 — Present · <span>Geocan Design Co., Ltd.</span></span>
+            <span data-lang-zh>2025 — 至今 · <span>久廣室內裝修有限公司</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Geocan Brand Guideline Gallery (6 of 15 selected pages) -->
+      <div class="case-gallery" data-gallery="geocan">
+        <div class="case-gallery-main">
+          <img id="geocan-main" src="images/geocan-01-about.jpg" alt="Geocan Brand Guideline — About page" />
+          <button class="case-gallery-zoom" type="button" aria-label="Open lightbox" data-zoom-target="geocan">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+          </button>
+          <div class="case-gallery-counter"><span id="geocan-counter">1</span> / 6</div>
+        </div>
+        <div class="case-gallery-thumbs">
+          <button type="button" class="case-gallery-thumb active" data-src="images/geocan-01-about.jpg" data-index="1" data-caption-en="About — brand origin & timeline" data-caption-zh="About — 品牌起源與時間軸">
+            <img src="images/geocan-01-about.jpg" alt="" loading="lazy" />
+          </button>
+          <button type="button" class="case-gallery-thumb" data-src="images/geocan-02-logo-construction.jpg" data-index="2" data-caption-en="Logo construction grid" data-caption-zh="Logo 構成輔助線">
+            <img src="images/geocan-02-logo-construction.jpg" alt="" loading="lazy" />
+          </button>
+          <button type="button" class="case-gallery-thumb" data-src="images/geocan-03-color-system.jpg" data-index="3" data-caption-en="Brand color — Pantone, CMYK, RGB, HEX" data-caption-zh="品牌色彩 — Pantone, CMYK, RGB, HEX 完整系統">
+            <img src="images/geocan-03-color-system.jpg" alt="" loading="lazy" />
+          </button>
+          <button type="button" class="case-gallery-thumb" data-src="images/geocan-04-typography.jpg" data-index="4" data-caption-en="Brand typography — bilingual type system" data-caption-zh="品牌字體 — 中英文雙系統規範">
+            <img src="images/geocan-04-typography.jpg" alt="" loading="lazy" />
+          </button>
+          <button type="button" class="case-gallery-thumb" data-src="images/geocan-05-business-cards.jpg" data-index="5" data-caption-en="Business card system" data-caption-zh="名片系統設計">
+            <img src="images/geocan-05-business-cards.jpg" alt="" loading="lazy" />
+          </button>
+          <button type="button" class="case-gallery-thumb" data-src="images/geocan-06-website.jpg" data-index="6" data-caption-en="Website — homepage application" data-caption-zh="網站 — 首頁應用設計">
+            <img src="images/geocan-06-website.jpg" alt="" loading="lazy" />
+          </button>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Challenge</span><span data-lang-zh class="inline">挑戰</span></h4>
+          <p>
+            <span data-lang-en>A 30-year, family-led B2B contractor serving developers, commercial spaces, and entertainment venues — built on three decades of contractor-grade trust. But the brand visual hadn't kept pace, increasingly out of step with how a new generation of B2B clients evaluate contractors. <strong>Modernize the brand without losing the trust signals that drive their decisions.</strong></span>
+            <span data-lang-zh>一家 30 年家族經營的 B2B 工程承包商,服務建商、商業空間、娛樂產業客戶 — 三十年累積的承包商級信任是核心資產。但品牌視覺並未隨之進化,與新世代 B2B 客戶評估承包商的方式逐漸脫節。<strong>現代化品牌,但不能失去客戶做決策時依賴的信任訊號。</strong></span>
+          </p>
+        </div>
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Strategy</span><span data-lang-zh class="inline">策略</span></h4>
+          <p>
+            <span data-lang-en>Designer-led, refined through close stakeholder collaboration. Three deliberate decisions:</span>
+            <span data-lang-zh>由我主導視覺方向,在與業主的密切討論中精煉執行。三個刻意的決策:</span>
+          </p>
+          <ul>
+            <li>
+              <span data-lang-en><strong>Preserve the trust core.</strong> Legacy logo concept retained as the brand's anchor.</span>
+              <span data-lang-zh><strong>保留信任核心。</strong> Logo 概念保留作為品牌錨點。</span>
+            </li>
+            <li>
+              <span data-lang-en><strong>Move opposite to the category.</strong> Most competitors over-corrected toward editorial, design-magazine aesthetics. For a contractor whose clients evaluate on technical reliability, that direction undermines trust. We went the other way: warm, grounded, modern but not editorial.</span>
+              <span data-lang-zh><strong>反向操作同業。</strong> 多數同業已過度修正,走向編輯感、設計雜誌風格。對一個客戶以「工程可靠度」評估的承包商,這個方向會傷害信任感。我們走相反方向:溫暖、紮實、現代但不文青。</span>
+            </li>
+            <li>
+              <span data-lang-en><strong>Function before flourish.</strong> Spaces are for living and working, not for being photographed. The visual system reflects that — solving problems over chasing trends.</span>
+              <span data-lang-zh><strong>實用優先,華麗其次。</strong> 空間是給人生活與工作的,不是給人拍照的。這個視覺系統反映這個哲學 — 解決問題大於追逐趨勢。</span>
+            </li>
+          </ul>
+        </div>
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Result</span><span data-lang-zh class="inline">成果</span></h4>
+          <ul>
+            <li>
+              <span data-lang-en>First comprehensive <strong>brand visual asset & external communication system</strong> in the company's 30-year history.</span>
+              <span data-lang-zh>公司 30 年歷史中<strong>首次</strong>建立完整的<strong>品牌視覺資產與對外溝通系統</strong>。</span>
+            </li>
+            <li>
+              <span data-lang-en>Complete VIS guidelines deployed across <strong>4 dimensions</strong>: color system, typography hierarchy, logo applications, and visual standards documentation.</span>
+              <span data-lang-zh>完整 VIS 規範部署於<strong>四大層面</strong>:色彩體系、字體階層、Logo 應用、視覺規範文件化。</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-header">
+        <div class="case-num">03</div>
+        <div>
+          <div class="case-meta-tags">
+            <span class="case-meta-tag" data-lang-en>UI/UX</span><span class="case-meta-tag" data-lang-zh>UI/UX</span>
+            <span class="case-meta-tag" data-lang-en>Design System</span><span class="case-meta-tag" data-lang-zh>設計系統</span>
+            <span class="case-meta-tag" data-lang-en>Branding</span><span class="case-meta-tag" data-lang-zh>品牌</span>
+            <span class="case-meta-tag" data-lang-en>RWD</span><span class="case-meta-tag" data-lang-zh>RWD</span>
+          </div>
+          <h3 class="case-title">
+            <span data-lang-en>A scalable design system<br/>for a <em>blockchain finance</em> platform.</span>
+            <span data-lang-zh>區塊鏈金融平台的<br/><em>可規模化設計系統</em>。</span>
+          </h3>
+          <div class="case-zh">騰雲運算 — 區塊鏈平台 UI/UX Design System</div>
+          <div class="case-meta">
+            <span data-lang-en>2023 — 2024 · <span>Skycloud Co., Ltd.</span></span>
+            <span data-lang-zh>2023 — 2024 · <span>騰雲運算股份有限公司</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-visual">
+        <div class="case-visual-placeholder">
+          <div class="case-visual-icon">02</div>
+          <div class="case-visual-text">
+            <span data-lang-en class="inline">Figma Design System · Web + Mobile UI</span>
+            <span data-lang-zh class="inline">Figma 設計系統 · 區塊鏈平台 UI</span>
+          </div>
+          <div class="case-visual-hint">
+            <span data-lang-en>Replace with: Figma design system screenshots / web + mobile UI mockups</span>
+            <span data-lang-zh>之後替換為:Figma 設計系統截圖 / Web + 手機 UI 拼貼</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Challenge</span><span data-lang-zh class="inline">挑戰</span></h4>
+          <p>
+            <span data-lang-en>An emerging blockchain finance platform required a complete visual system and user experience built from scratch — covering web and mobile, scalable for future multi-product expansion. The classic FinTech tension: <strong>technical credibility vs. brand approachability.</strong></span>
+            <span data-lang-zh>新興區塊鏈金融平台需要從零建立完整視覺系統與使用者體驗 — 涵蓋 Web 與行動端,並支援後續多產品線擴展。經典的 FinTech 張力:<strong>技術可信度 vs 品牌親和力</strong>。</span>
+          </p>
+        </div>
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Strategy</span><span data-lang-zh class="inline">策略</span></h4>
+          <p>
+            <span data-lang-en>Built a scalable Figma Design System with dual-track structure: <strong>core system + application system</strong>. Designed full Web + RWD mobile experience from user-flow analysis through interactive prototypes, in close collaboration with engineering for implementation feasibility. The visual system established for Skycloud was <strong>subsequently extended to GoEasy Tech</strong>, the parent group's sister company.</span>
+            <span data-lang-zh>以 Figma 建立可規模化設計系統,雙軌架構:<strong>基本系統 + 應用系統</strong>。從使用者流程出發,規劃 Web 與 RWD 手機完整體驗,從 wireframe 到互動原型,並與工程端密切協作確保可實作性。為騰雲建立的視覺系統<strong>後續延伸至集團姐妹公司高易科技</strong>。</span>
+          </p>
+        </div>
+        <div class="case-block">
+          <h4><span data-lang-en class="inline">Result</span><span data-lang-zh class="inline">成果</span></h4>
+          <ul>
+            <li>
+              <span data-lang-en>Established complete corporate visual identity for <strong>two parent-group companies</strong> (Skycloud and GoEasy Tech).</span>
+              <span data-lang-zh>建立<strong>集團兩家子公司</strong>(騰雲運算 + 高易科技)的完整企業視覺識別。</span>
+            </li>
+            <li>
+              <span data-lang-en>Figma Design System significantly improved subsequent design iteration efficiency.</span>
+              <span data-lang-zh>Figma 設計系統大幅提升後續設計迭代效率。</span>
+            </li>
+            <li>
+              <span data-lang-en>Scalable design asset library — lowering the threshold for future product development.</span>
+              <span data-lang-zh>可規模化的設計資產庫,降低未來新產品開發門檻。</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 03: 久廣 -->
+
+</div>
+</section>
+
+<!-- ============================================
+     AWARDS — Single hero band (你選的版本)
+     ============================================ -->
+<section class="awards" id="awards">
+  <div class="container">
+    <div class="awards-eyebrow reveal">
+      <span data-lang-en>Recognition</span>
+      <span data-lang-zh>商業成果</span>
+    </div>
+    <h2 class="awards-headline reveal">
+      <span data-lang-en>Visual design tied to <em>commercial outcome.</em></span>
+      <span data-lang-zh>視覺設計綁定<em>商業成果。</em></span>
+    </h2>
+
+    <div class="awards-band reveal">
+      <div class="award-cell">
+        <div class="award-cell-meta">
+          <span>2019 — 2021</span>
+          <span data-lang-en>· Economic Daily News × TAITRA</span>
+          <span data-lang-zh>· 經濟日報 × 外貿協會</span>
+        </div>
+        <div class="award-cell-value">NT$1M<em>+</em></div>
+        <div class="award-cell-title">
+          <span data-lang-en>in ad revenue, supported.</span>
+          <span data-lang-zh>廣告業績支撐成果。</span>
+        </div>
+        <p class="award-cell-desc">
+          <span data-lang-en>Primary visual design supported the ShowDaily Medical Expo annual magazine in achieving NT$1M+ in advertising revenue across three editions.</span>
+          <span data-lang-zh>主視覺設計支撐 ShowDaily 醫療展年度專刊,於三屆累計達成 NT$1M+ 廣告業績。</span>
+        </p>
+      </div>
+      <div class="award-cell">
+        <div class="award-cell-meta">
+          <span>2021</span>
+          <span data-lang-en>· Individual Recognition</span>
+          <span data-lang-zh>· 個人獎項</span>
+        </div>
+        <div class="award-cell-value">
+          <span data-lang-en>Outstanding<br/><em>Employee.</em></span>
+          <span data-lang-zh>傑出員工<br/><em>個人獎</em></span>
+        </div>
+        <div class="award-cell-title">
+          <span data-lang-en>2021 · Economic Daily News.</span>
+          <span data-lang-zh>2021 · 經濟日報。</span>
+        </div>
+        <p class="award-cell-desc">
+          <span data-lang-en>Awarded the 2021 Outstanding Employee Award — a once-yearly company-wide recognition for individual contribution.</span>
+          <span data-lang-zh>獲頒 2021 經濟日報傑出員工獎 — 全公司一年一度的個人貢獻獎項。</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="awards-footer reveal">
+      <span data-lang-en>The clearest signal of design value isn't aesthetic preference — <span>it's whether work moves money.</span></span>
+      <span data-lang-zh>設計價值最清楚的訊號不是美學偏好 — <span>而是作品是否撥動商業數字。</span></span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     EXPERIENCE
+     ============================================ -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">
+        <span data-lang-en class="inline">03 / Experience</span>
+        <span data-lang-zh class="inline">03 / 工作經歷</span>
+      </div>
+      <h2 class="sec-title">
+        <span data-lang-en>13 years, <em>six chapters.</em></span>
+        <span data-lang-zh>13 年資歷,<em>六個篇章。</em></span>
+      </h2>
+      <p class="sec-sub">
+        <span data-lang-en>Each role builds a layer of the cross-industry capability stack — from print editorial to front-end shipped code.</span>
+        <span data-lang-zh>每一份工作堆疊一層跨產業能力 — 從印刷編輯到前端上線程式碼。</span>
+      </p>
+    </div>
+
+    <div class="exp-list reveal">
+
+      <div class="exp-item">
+        <div class="exp-date">
+          <span data-lang-en class="inline">2025/01 — Present</span>
+          <span data-lang-zh class="inline">2025/01 — 至今</span>
+        </div>
+        <div>
+          <h3 class="exp-role">
+            <span data-lang-en>Senior Brand Visual Designer</span>
+            <span data-lang-zh>資深品牌視覺設計師</span>
+            <span class="exp-role-zh">資深品牌視覺設計師</span>
+          </h3>
+          <div class="exp-company">
+            <span data-lang-en>Geocan Design Co., Ltd. · 久廣室內裝修有限公司</span>
+            <span data-lang-zh>久廣室內裝修有限公司 · Geocan Design</span>
+          </div>
+          <p class="exp-quote">
+            <span data-lang-en>Independently leading the digital brand transformation for a 30-year B2B enterprise — full chain from positioning to live website.</span>
+            <span data-lang-zh>獨立操盤 30 年 B2B 企業品牌數位重塑 — 從品牌定位到官網上線完整鏈路。</span>
+          </p>
+          <div class="exp-tags">
+            <span data-lang-en>Branding</span><span data-lang-zh>品牌</span>
+            <span data-lang-en>VIS System</span><span data-lang-zh>VIS</span>
+            <span data-lang-en>Website</span><span data-lang-zh>官網</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-lang-en>First comprehensive brand visual asset & external communication system for a 30-year traditional B2B enterprise.</span><span data-lang-zh>首次為 30 年傳統 B2B 企業建立完整的品牌視覺資產與對外溝通系統。</span></li>
+            <li><span data-lang-en>Built complete VIS guidelines: color, typography, logo applications, and visual standards documentation.</span><span data-lang-zh>建立完整 VIS 規範:標準色、標準字、Logo 應用與視覺規範文件化。</span></li>
+            <li><span data-lang-en>Owned the official website end-to-end — information architecture, content organization, and visual implementation.</span><span data-lang-zh>官方網站從架構規劃、內容組織到視覺呈現一手完成。</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2024/03 — 2025/01</div>
+        <div>
+          <h3 class="exp-role">
+            <span data-lang-en>Senior Marketing Visual Designer</span>
+            <span data-lang-zh>資深行銷視覺設計師</span>
+            <span class="exp-role-zh">資深行銷視覺設計師</span>
+          </h3>
+          <div class="exp-company">
+            <span data-lang-en>QT Medical Inc., Taiwan Branch · 美商宇心生醫</span>
+            <span data-lang-zh>美商宇心生醫股份有限公司台灣分公司</span>
+          </div>
+          <p class="exp-quote">
+            <span data-lang-en>Cardiac monitoring medical device brand — visual coordination across global medical conferences and exhibitions.</span>
+            <span data-lang-zh>心臟監測醫材品牌 — 全球醫學會、年會、展會視覺統籌。</span>
+          </p>
+          <div class="exp-tags">
+            <span data-lang-en>Branding</span><span data-lang-zh>品牌</span>
+            <span data-lang-en>Visual</span><span data-lang-zh>視覺</span>
+            <span data-lang-en>Website</span><span data-lang-zh>官網</span>
+            <span data-lang-en>Marketing</span><span data-lang-zh>行銷</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-lang-en>Translated highly specialized clinical content into visual assets balancing scientific rigor with market appeal.</span><span data-lang-zh>將高度專業的醫療臨床內容,轉譯為兼具科學嚴謹度與市場說服力的視覺資產。</span></li>
+            <li><span data-lang-en>Three-tier B2B2C audience: physicians, hospital procurement decision-makers, and patient education contexts.</span><span data-lang-zh>服務對象橫跨三個層級:醫師、醫院採購決策層、終端患者衛教場景(B2B2C 多層決策鏈)。</span></li>
+            <li><span data-lang-en>Integrated video production, website maintenance, and cross-touchpoint brand consistency.</span><span data-lang-zh>整合影音製作、官網視覺維護,確保跨媒材品牌一致性。</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2023/07 — 2024/01</div>
+        <div>
+          <h3 class="exp-role">
+            <span data-lang-en>Senior Visual Designer</span>
+            <span data-lang-zh>資深視覺設計師</span>
+            <span class="exp-role-zh">資深視覺設計師</span>
+          </h3>
+          <div class="exp-company">
+            <span data-lang-en>Skycloud Co., Ltd. · 騰雲運算股份有限公司</span>
+            <span data-lang-zh>騰雲運算股份有限公司</span>
+          </div>
+          <p class="exp-quote">
+            <span data-lang-en>Built the complete visual system for a blockchain finance platform — Figma Design System with dual-track structure.</span>
+            <span data-lang-zh>獨立建構區塊鏈金融平台完整視覺系統 — 以 Figma 建立雙軌架構 Design System。</span>
+          </p>
+          <div class="exp-tags">
+            <span data-lang-en>Branding</span><span data-lang-zh>品牌</span>
+            <span data-lang-en>UI/UX</span><span data-lang-zh>UI/UX</span>
+            <span data-lang-en>Design System</span><span data-lang-zh>設計系統</span>
+            <span data-lang-en>RWD</span><span data-lang-zh>RWD</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-lang-en>Scalable Figma Design System: core system + application system, dual-track architecture.</span><span data-lang-zh>以 Figma 建立可規模化 Design System:基本系統 + 應用系統雙軌架構。</span></li>
+            <li><span data-lang-en>Full Web + RWD mobile front-end UX, from wireframes through interactive prototypes.</span><span data-lang-zh>區塊鏈平台前台 UI/UX 設計(Web + RWD 手機版完整體驗),從 wireframe 到互動原型。</span></li>
+            <li><span data-lang-en>Concurrently led VIS rebuilding for two subsidiary companies under the parent group.</span><span data-lang-zh>同步操盤騰雲運算與高易科技兩家集團子公司的企業識別系統重塑。</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2022/04 — 2023/07</div>
+        <div>
+          <h3 class="exp-role">
+            <span data-lang-en>Visual Designer</span>
+            <span data-lang-zh>視覺設計師</span>
+            <span class="exp-role-zh">視覺設計師</span>
+          </h3>
+          <div class="exp-company">
+            <span data-lang-en>SKECHERS Taiwan · 思克威爾 (SKECHERS / BROOKS)</span>
+            <span data-lang-zh>思克威爾股份有限公司 (SKECHERS / BROOKS)</span>
+          </div>
+          <p class="exp-quote">
+            <span data-lang-en>Independently led UNO collection's e-commerce visual strategy — full pipeline from brand tone to HTML/CSS/JS Landing Page.</span>
+            <span data-lang-zh>獨立操盤 UNO 系列電商視覺策略 — 從品牌調性到 HTML/CSS/JS Landing Page 完整鏈路一人包辦。</span>
+          </p>
+          <div class="exp-tags">
+            <span data-lang-en>Branding</span><span data-lang-zh>品牌</span>
+            <span data-lang-en>Visual</span><span data-lang-zh>視覺</span>
+            <span data-lang-en>Front-End</span><span data-lang-zh>前端</span>
+            <span data-lang-en>Motion</span><span data-lang-zh>動態</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-lang-en>Defined hand-drawn typographic direction for UNO's differentiated emotional connection.</span><span data-lang-zh>為 UNO 系列定調手寫風格的差異化情感連結方向。</span></li>
+            <li><span data-lang-en>Owned the full deliverable: logo, layout, static/motion, and HTML/CSS/JavaScript implementation.</span><span data-lang-zh>從 Logo、版面、靜態到動態完整負責,並以 HTML/CSS/JavaScript 獨立完成 Landing Page。</span></li>
+            <li><span data-lang-en>Cross-channel visual consistency: e-commerce banners, campaign visuals, in-store displays, IG video, brand greeting cards.</span><span data-lang-zh>跨通路視覺一致性:電商 Banner、活動視覺、店頭陳列、IG 影片剪接、品牌動態賀卡。</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2019/02 — 2021/07</div>
+        <div>
+          <h3 class="exp-role">
+            <span data-lang-en>Website & Editorial Designer (Lead Visual)</span>
+            <span data-lang-zh>網頁設計師 / 主視覺主責</span>
+            <span class="exp-role-zh">網頁設計師 / 主視覺主責</span>
+          </h3>
+          <div class="exp-company">
+            <span data-lang-en>Economic Daily News · 經濟日報股份有限公司</span>
+            <span data-lang-zh>經濟日報股份有限公司</span>
+          </div>
+          <p class="exp-quote">
+            <span data-lang-en>Primary visual design supported NT$1M+ ad revenue for ShowDaily annual magazine. 2021 Outstanding Employee Award.</span>
+            <span data-lang-zh>主視覺設計支撐 ShowDaily 年度專刊達成 NT$1M+ 廣告業績,獲頒 2021 經濟日報傑出員工獎。</span>
+          </p>
+          <div class="exp-tags">
+            <span data-lang-en>Editorial</span><span data-lang-zh>編輯設計</span>
+            <span data-lang-en>B2B Branding</span><span data-lang-zh>B2B 品牌</span>
+            <span data-lang-en>Project Management</span><span data-lang-zh>專案管理</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-lang-en>Led primary visual & editorial system for ShowDaily Medical Expo annual magazine (2019–2021).</span><span data-lang-zh>主導外貿協會醫療展 ShowDaily 年度專刊主視覺與內頁編輯系統(2019–2021)。</span></li>
+            <li><span data-lang-en>Cross-border UX project management: 14-language Global Sources website redesign.</span><span data-lang-zh>跨國 UX 專案管理:14 國語言全球通網站改版。</span></li>
+            <li><span data-lang-en>Junior team lead: onboarding new designers, managing front-end engineering project timelines.</span><span data-lang-zh>單位小主管:協助主管帶新人、管理前端工程師專案進度。</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">2017/03 — 2018/03</div>
+        <div>
+          <h3 class="exp-role">
+            <span data-lang-en>Website Designer</span>
+            <span data-lang-zh>網頁設計師</span>
+            <span class="exp-role-zh">網頁設計師</span>
+          </h3>
+          <div class="exp-company">
+            <span data-lang-en>NSS · 戰國策網路科技有限公司</span>
+            <span data-lang-zh>戰國策網路科技有限公司</span>
+          </div>
+          <p class="exp-quote">
+            <span data-lang-en>Print-to-digital transition — self-taught HTML / CSS / Bootstrap; established the team's design SOP.</span>
+            <span data-lang-zh>從平面延伸至數位的轉型期 — 自學 HTML / CSS / Bootstrap,建立部門 SOP 流程。</span>
+          </p>
+          <div class="exp-tags">
+            <span>Bootstrap</span><span>WordPress</span>
+            <span data-lang-en>UI/HTML</span><span data-lang-zh>UI/HTML</span>
+            <span>SOP</span>
+          </div>
+          <ul class="exp-bullets">
+            <li><span data-lang-en>Web visual & front-end execution: WordPress / Bootstrap / UI / HTML+CSS planning.</span><span data-lang-zh>網頁視覺與前端執行:WordPress / Bootstrap / UI / HTML+CSS 規劃。</span></li>
+            <li><span data-lang-en>Project management role: trained junior designers and built department-level SOP.</span><span data-lang-zh>擔任專案經理,訓練年輕設計師,建立部門 SOP 流程。</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CAPABILITIES
+     ============================================ -->
+<section class="capabilities" id="capabilities">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-eyebrow">
+        <span data-lang-en class="inline">04 / Capabilities</span>
+        <span data-lang-zh class="inline">04 / 能力光譜</span>
+      </div>
+      <h2 class="sec-title">
+        <span data-lang-en>From brand strategy to<br/><em>front-end fidelity.</em></span>
+        <span data-lang-zh>從品牌策略到<br/><em>前端完整保真度。</em></span>
+      </h2>
+      <p class="sec-sub">
+        <span data-lang-en>A vertically integrated stack — strategy, visual system, digital execution, and front-end implementation. Brand details survive from design file to live deployment.</span>
+        <span data-lang-zh>一個垂直整合的能力堆疊 — 策略、視覺系統、數位執行、前端實作。品牌細節從設計稿到上線無妥協。</span>
+      </p>
+    </div>
+
+    <div class="cap-grid reveal">
+      <div class="cap">
+        <div class="cap-num">01</div>
+        <div class="cap-body">
+          <h3>
+            <span data-lang-en>Brand Design</span>
+            <span data-lang-zh>品牌設計</span>
+          </h3>
+          <div class="zh">品牌設計</div>
+          <div class="cap-tools">
+            <span class="cap-tool">Brand Identity</span>
+            <span class="cap-tool">VIS System</span>
+            <span class="cap-tool">Brand Strategy</span>
+            <span class="cap-tool">Repositioning</span>
+            <span class="cap-tool">Logo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cap">
+        <div class="cap-num">02</div>
+        <div class="cap-body">
+          <h3>
+            <span data-lang-en>Digital Design</span>
+            <span data-lang-zh>數位設計 · UI/UX</span>
+          </h3>
+          <div class="zh">數位設計 · UI/UX</div>
+          <div class="cap-tools">
+            <span class="cap-tool">UI/UX</span>
+            <span class="cap-tool">Figma</span>
+            <span class="cap-tool">Adobe XD</span>
+            <span class="cap-tool">Design System</span>
+            <span class="cap-tool">RWD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cap">
+        <div class="cap-num">03</div>
+        <div class="cap-body">
+          <h3>
+            <span data-lang-en>Front-End Development</span>
+            <span data-lang-zh>前端開發</span>
+          </h3>
+          <div class="zh">前端開發</div>
+          <div class="cap-tools">
+            <span class="cap-tool">HTML</span>
+            <span class="cap-tool">CSS</span>
+            <span class="cap-tool">JavaScript</span>
+            <span class="cap-tool">Bootstrap</span>
+            <span class="cap-tool">WordPress</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cap">
+        <div class="cap-num">04</div>
+        <div class="cap-body">
+          <h3>
+            <span data-lang-en>Editorial & Print</span>
+            <span data-lang-zh>編輯與印刷</span>
+          </h3>
+          <div class="zh">編輯與印刷</div>
+          <div class="cap-tools">
+            <span class="cap-tool">Editorial</span>
+            <span class="cap-tool">Magazine Layout</span>
+            <span class="cap-tool">Print Production</span>
+            <span class="cap-tool">Catalog</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cap">
+        <div class="cap-num">05</div>
+        <div class="cap-body">
+          <h3>
+            <span data-lang-en>Motion & Video</span>
+            <span data-lang-zh>動態影像</span>
+          </h3>
+          <div class="zh">動態影像</div>
+          <div class="cap-tools">
+            <span class="cap-tool">After Effects</span>
+            <span class="cap-tool">Premiere</span>
+            <span class="cap-tool">Motion Graphics</span>
+            <span class="cap-tool">Video Editing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cap">
+        <div class="cap-num">06</div>
+        <div class="cap-body">
+          <h3>
+            <span data-lang-en>AI-Augmented Workflow</span>
+            <span data-lang-zh>AI 工具整合工作流</span>
+          </h3>
+          <div class="zh">AI 工具整合工作流</div>
+          <div class="cap-tools">
+            <span class="cap-tool">ChatGPT</span>
+            <span class="cap-tool">Midjourney</span>
+            <span class="cap-tool">Localization Automation</span>
+            <span class="cap-tool">B2B Workflow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA
+     ============================================ -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="cta-eyebrow">
+        <span data-lang-en class="inline">— Let's talk —</span>
+        <span data-lang-zh class="inline">— 讓我們聊聊 —</span>
+      </div>
+      <h2 class="cta-title">
+        <span data-lang-en>See the work,<br/><em>not just the words.</em></span>
+        <span data-lang-zh>看作品,<br/><em>而非僅是文字。</em></span>
+      </h2>
+      <p class="cta-sub">
+        <span data-lang-en>Brand design is judged on the page, not the bullet point. The next conversation starts with a single email.</span>
+        <span data-lang-zh>品牌設計用作品說話,而非條列敘述。下一次對話從一封 Email 開始。</span>
+      </p>
+
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="mailto:sarah20120829@gmail.com">
+          <span data-lang-en class="inline">Email me</span>
+          <span data-lang-zh class="inline">發送 Email</span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="btn btn-ghost" href="https://www.cake.me/zahahyang_zht" target="_blank" rel="noopener">
+          Cake Resume
+        </a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/zahahyang" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+      </div>
+
+      <a class="cta-contact" href="mailto:sarah20120829@gmail.com">sarah20120829@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="foot-brand">Zahah <em>Yang</em></div>
+        <div class="foot-tag">
+          <span data-lang-en>Senior Brand Designer · Brand × Digital × Cross-Industry</span>
+          <span data-lang-zh>資深品牌設計師 · 品牌 × 數位 × 跨產業</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>
+          <span data-lang-en class="inline">Contact</span>
+          <span data-lang-zh class="inline">聯繫</span>
+        </h4>
+        <a href="mailto:sarah20120829@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/zahahyang" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.cake.me/zahahyang_zht" target="_blank" rel="noopener">Cake Resume</a>
+      </div>
+      <div class="foot-col">
+        <h4>
+          <span data-lang-en class="inline">Location</span>
+          <span data-lang-zh class="inline">地點</span>
+        </h4>
+        <span data-lang-en>New Taipei City</span>
+        <span data-lang-zh>新北市</span>
+        <span data-lang-en>Taiwan · UTC+8</span>
+        <span data-lang-zh>台灣 · UTC+8</span>
+      </div>
+      <div class="foot-col">
+        <h4>
+          <span data-lang-en class="inline">Status</span>
+          <span data-lang-zh class="inline">狀態</span>
+        </h4>
+        <span data-lang-en>Open to roles</span>
+        <span data-lang-zh>開放新機會</span>
+        <span data-lang-en>Selectively responding</span>
+        <span data-lang-zh>選擇性回覆</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-lang-en>© 2026 Zahah Yang · All rights reserved</span>
+      <span data-lang-zh>© 2026 楊婷雅 · 版權所有</span>
+      <span data-lang-en>Designed & built — HTML, CSS, JavaScript</span>
+      <span data-lang-zh>設計與開發 — HTML, CSS, JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     LIGHTBOX (Geocan Brand Guideline gallery)
+     ============================================ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+  <button class="lightbox-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-prev" id="lbPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-next" id="lbNext" aria-label="Next">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-stage">
+    <img id="lbImage" src="" alt="" />
+  </div>
+  <div class="lightbox-meta">
+    <span class="lightbox-counter"><span id="lbIndex">1</span> / <span id="lbTotal">6</span></span>
+    <span class="lightbox-caption" id="lbCaption"></span>
+  </div>
+</div>
+
+<!-- ============================================
+     INTERACTIONS
+     ============================================ -->
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      const offset = 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ============================================
+// LANGUAGE TOGGLE
+// ============================================
+const langEnBtn = document.getElementById('langEn');
+const langZhBtn = document.getElementById('langZh');
+const htmlEl = document.documentElement;
+
+function setLanguage(lang) {
+  htmlEl.setAttribute('lang', lang);
+  if (lang === 'en') {
+    langEnBtn.classList.add('active');
+    langZhBtn.classList.remove('active');
+  } else {
+    langZhBtn.classList.add('active');
+    langEnBtn.classList.remove('active');
+  }
+  try { localStorage.setItem('preferredLang', lang); } catch(e) {}
+}
+
+let savedLang = 'en';
+try { savedLang = localStorage.getItem('preferredLang') || 'en'; } catch(e) {}
+setLanguage(savedLang);
+langEnBtn.addEventListener('click', () => setLanguage('en'));
+langZhBtn.addEventListener('click', () => setLanguage('zh-Hant'));
+
+// ============================================
+// MOBILE NAV (HAMBURGER)
+// ============================================
+const burger = document.getElementById('navBurger');
+const navLinksEl = document.getElementById('navLinks');
+if (burger && navLinksEl) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinksEl.classList.toggle('open');
+  });
+  navLinksEl.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('open');
+      navLinksEl.classList.remove('open');
+    });
+  });
+}
+
+// ============================================
+// SIDE DOT NAV — active state on scroll
+// ============================================
+const dotnavLinks = document.querySelectorAll('.dotnav a');
+const sectionIds = ['top', 'positioning', 'cases', 'awards', 'experience', 'capabilities', 'contact'];
+const navSections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+function updateDotNav() {
+  const scrollPos = window.scrollY + window.innerHeight / 3;
+  let activeIndex = 0;
+  navSections.forEach((sec, i) => {
+    if (sec.offsetTop <= scrollPos) activeIndex = i;
+  });
+  dotnavLinks.forEach((a, i) => a.classList.toggle('active', i === activeIndex));
+}
+window.addEventListener('scroll', updateDotNav, { passive: true });
+updateDotNav();
+
+/* ============================================
+   GALLERY + LIGHTBOX (Geocan Brand Guideline)
+   ============================================ */
+(function initGalleryAndLightbox() {
+  const gallery = document.querySelector('.case-gallery[data-gallery="geocan"]');
+  if (!gallery) return;
+
+  const mainImg = gallery.querySelector('.case-gallery-main img');
+  const counter = gallery.querySelector('.case-gallery-counter span');
+  const thumbs = Array.from(gallery.querySelectorAll('.case-gallery-thumb'));
+  const zoomBtn = gallery.querySelector('.case-gallery-zoom');
+
+  // Build image list from thumbs (single source of truth)
+  const images = thumbs.map(t => ({
+    src: t.dataset.src,
+    en: t.dataset.captionEn || '',
+    zh: t.dataset.captionZh || '',
+    index: parseInt(t.dataset.index, 10)
+  }));
+
+  let currentIndex = 0; // zero-based
+
+  // ---------- Gallery: thumb click swaps main image ----------
+  function setMain(i) {
+    if (i < 0 || i >= images.length) return;
+    currentIndex = i;
+    const img = images[i];
+
+    mainImg.classList.add('fading');
+    setTimeout(() => {
+      mainImg.src = img.src;
+      mainImg.alt = img.en;
+      mainImg.classList.remove('fading');
+    }, 200);
+
+    if (counter) counter.textContent = img.index;
+    thumbs.forEach((t, idx) => t.classList.toggle('active', idx === i));
+  }
+
+  thumbs.forEach((t, i) => {
+    t.addEventListener('click', () => setMain(i));
+  });
+
+  // ---------- Lightbox elements ----------
+  const lb = document.getElementById('lightbox');
+  const lbImage = document.getElementById('lbImage');
+  const lbIndex = document.getElementById('lbIndex');
+  const lbTotal = document.getElementById('lbTotal');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+
+  if (!lb || !lbImage) return;
+  if (lbTotal) lbTotal.textContent = images.length;
+
+  function getCurrentLang() {
+    return document.documentElement.lang === 'zh-Hant' ? 'zh' : 'en';
+  }
+
+  function openLightbox(i) {
+    currentIndex = i;
+    updateLightbox();
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+  }
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+  }
+  function updateLightbox() {
+    const img = images[currentIndex];
+    lbImage.src = img.src;
+    lbImage.alt = img.en;
+    if (lbIndex) lbIndex.textContent = img.index;
+    if (lbCaption) {
+      lbCaption.textContent = getCurrentLang() === 'zh' ? img.zh : img.en;
+    }
+    // Also sync gallery state
+    setMainSilent(currentIndex);
+  }
+  function setMainSilent(i) {
+    // Update gallery without triggering fade (for sync only)
+    const img = images[i];
+    mainImg.src = img.src;
+    mainImg.alt = img.en;
+    if (counter) counter.textContent = img.index;
+    thumbs.forEach((t, idx) => t.classList.toggle('active', idx === i));
+  }
+  function nextImg() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightbox();
+  }
+  function prevImg() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightbox();
+  }
+
+  // ---------- Trigger lightbox ----------
+  if (zoomBtn) {
+    zoomBtn.addEventListener('click', () => openLightbox(currentIndex));
+  }
+  // Click on main image also opens lightbox
+  if (mainImg) {
+    mainImg.style.cursor = 'zoom-in';
+    mainImg.addEventListener('click', () => openLightbox(currentIndex));
+  }
+
+  // ---------- Lightbox controls ----------
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+  if (lbPrev) lbPrev.addEventListener('click', prevImg);
+  if (lbNext) lbNext.addEventListener('click', nextImg);
+
+  // Click on backdrop (not on image/buttons) closes
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) closeLightbox();
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextImg();
+    if (e.key === 'ArrowLeft') prevImg();
+  });
+
+  // Update caption when language toggles (existing toggle re-sets html.lang)
+  // Listen to lang change via MutationObserver
+  const observer = new MutationObserver(() => {
+    if (lb.classList.contains('open') && lbCaption) {
+      const img = images[currentIndex];
+      lbCaption.textContent = getCurrentLang() === 'zh' ? img.zh : img.en;
+    }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+})();
+</script>
+
+</body>
+</html>
